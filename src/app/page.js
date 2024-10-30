@@ -1,3 +1,6 @@
+import About from "./about/page";
+
+
 export default function Home() {
   const posts = [
     {
@@ -106,6 +109,10 @@ export default function Home() {
               </div>
             </div>
           ))}
+          
+        </div>
+        <div>
+          <About />
         </div>
       </section>
     </div>

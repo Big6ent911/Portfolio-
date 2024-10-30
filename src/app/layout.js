@@ -2,7 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./component/header"
 import Footer from "./component/footer"
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -22,6 +22,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    
+    <html lang="en">
+      <body className="(`${geistSans.variable} ${geistMono.variable} antialised`)"
+      >
+        <Header />
+        {children}
+        <Footer />
+      </body>
+    </html>
   )
 }
